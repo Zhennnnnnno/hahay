@@ -61,7 +61,19 @@
             // Sembunyikan tombol
             tombolKejutan.style.display = 'none';
         });
+             });
+
+            tombolSembunyi.addEventListener('click', () => {
+            // Sembunyikan semua gambar
+            semuaGambar.forEach(img => img.style.display = 'none');
+
+            // Tampilkan tombol random lagi
+            tombolKejutan.style.display = 'block';
+            tombolSembunyi.style.display = 'none';
+        });
+        
     </script>
 
 </body>
 </html>
+
