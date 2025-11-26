@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejutan Horor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Latar belakang hitam untuk suasana horor */
+            margin: 0;
+        }
+
+        #foto-setan {
+            /* Sembunyikan gambar secara default */
+            display: none; 
+            max-width: 100%;
+            max-height: 100vh;
+            /* Tambahkan efek transisi atau animasi jika mau */
+            /* transition: opacity 0.5s ease-in-out; */
+        }
+
+        #tombol-kejutan {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="tombol-kejutan">Pencet Ini Kalo Berani!</button>
+    
+    <!-- Ganti 'url_gambar_setan.jpg' dengan path file gambar kamu atau URL gambar setan -->
+    <img id="foto-setan" src="c4ef8a813deb9ec2d09d1a1a98c89405.jpg" alt="Foto Setan">
+
+    <script>
+        // Ambil elemen tombol dan gambar
+        const tombolKejutan = document.getElementById('tombol-kejutan');
+        const fotoSetan = document.getElementById('foto-setan');
+
+        // Tambahkan event listener untuk klik tombol
+        tombolKejutan.addEventListener('click', () => {
+            // Saat tombol diklik, ubah properti display gambar menjadi 'block' (terlihat)
+            fotoSetan.style.display = 'block';
+            // Opsional: Sembunyikan tombol setelah diklik
+            tombolKejutan.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
